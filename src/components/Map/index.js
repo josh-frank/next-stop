@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
+import GridLines from "./GridLines";
 
 export default function Map() {
 
@@ -15,6 +16,7 @@ export default function Map() {
             viewbox={ `0 0 ${ height } ${ width }` }
         >
             { mouseDown && <circle cx={ mouseCoordinates.x } cy={ mouseCoordinates.y } r="5"></circle> }
+            <GridLines />
         </StyledMap>
     );
 

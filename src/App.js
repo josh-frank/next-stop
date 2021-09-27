@@ -2,8 +2,9 @@ import { useCallback, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import './App.css';
 
-import Map from './components/Map';
-import Menu from './components/Menu';
+import Map from './components/Map/';
+import Menu from './components/Menu/';
+import Modal from './components/Modal';
 import { setDimensions, setMouseCoordinates, setMouseDown } from './redux/clientSlice';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
 
   return (
     <>
+      {/* <Modal /> */}
       <Menu />
       <Map />
     </>
