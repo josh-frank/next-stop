@@ -24,4 +24,5 @@ const StyledMap = styled.svg`
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 `;

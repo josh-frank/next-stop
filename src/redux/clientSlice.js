@@ -9,15 +9,9 @@ const clientSlice = createSlice( {
         mouseDown: false
     },
     reducers: {
-        setDimensions( state, action ) {
-            return { ...state, width: action.payload.width || state.width, height: action.payload.height || state.height };
-        },
-        setMouseCoordinates( state, action ) {
-            return { ...state, mouseCoordinates: action.payload };
-        },
-        setMouseDown( state, action ) {
-            return { ...state, mouseDown: action.payload };
-        }
+        setDimensions: ( state, action ) => ( { ...state, width: action.payload.width || state.width, height: action.payload.height || state.height } ),
+        setMouseCoordinates: ( state, action ) => ( { ...state, mouseCoordinates: action.payload } ),
+        setMouseDown: ( state, action ) => ( { ...state, mouseDown: action.payload } )
     }
 } );
 

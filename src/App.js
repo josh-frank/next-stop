@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import './App.css';
 
 import Map from './components/Map';
+import Menu from './components/Menu';
 import { setDimensions, setMouseCoordinates, setMouseDown } from './redux/clientSlice';
 
 function App() {
@@ -34,7 +35,10 @@ function App() {
   }, [ handleMouseDown, handleMouseMove, handleMouseUp, handleResize ] );
 
   return (
-    <Map />
+    <>
+      <Menu />
+      <Map />
+    </>
   );
 
 }
